@@ -1,0 +1,105 @@
+.page-header {
+  background: linear-gradient(180deg, $color-dark-blue 85%, $color-transparent 100%);
+  color: $color-default-white;
+  line-height: 18px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 35px;
+
+  @include vp-1023 {
+    position: static;
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo-desktop{
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.page-header__logo-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.page-header__mail {
+  display: flex;
+  align-items: center;
+  margin-left: 33px;
+  margin-bottom: 5px;
+
+  @include vp-1023 {
+    margin-left: auto;
+    margin-bottom: 15px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
+
+.page-header__phone {
+  display: flex;
+  align-items: center;
+  margin-right: 37px;
+  margin-bottom: 5px;
+
+  @include vp-1023 {
+    margin-right: 30px;
+    margin-left: 38px;
+    margin-bottom: 15px;
+  }
+
+  @include vp-767 {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.page-header__mail-text,
+.page-header__phone-text {
+  margin-left: 15px;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.page-header__button {
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-default-white;
+  background-color: $color-transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px;
+  width: 160px;
+  margin-right: 60px;
+  margin-bottom: 5px;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
