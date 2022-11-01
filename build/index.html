@@ -1,17 +1,50 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <meta name="description" content="Smart Device умные технологии">
+    <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/pt-mono-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="page-header">
+        <div class="container">
+          <div class="page-header__wrapper">
+            <svg class="page-header__logo page-header__logo-desktop" width="215" height="55">
+              <use href="img/sprite_auto.svg#logo"></use>
+            </svg>
+            <svg class="page-header__logo page-header__logo-mobile" width="35" height="35">
+              <use href="img/sprite_auto.svg#logo-mobile"></use>
+            </svg>
+            <div class="page-header__mail">
+              <svg class="page-header__mail-icon" width="21" height="20">
+                <use href="img/sprite_auto.svg#icon-email"></use>
+              </svg>
+              <p class="page-header__mail-text">
+                info@sd.ru
+              </p>
+            </div>
+            <div class="page-header__phone">
+              <svg class="page-header__phone-icon" width="21" height="20">
+                <use href="img/sprite_auto.svg#icon-phone"></use>
+              </svg>
+              <p class="page-header__phone-text">
+                +7 (495) 000 52 52
+              </p>
+            </div>
+            <div class="page-header__box">
+              <button class="page-header__button" type="button">
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+        </div>
       </header>
       <main>
         <section class="intro">
