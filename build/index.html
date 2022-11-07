@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,6 +12,7 @@
     <link rel="preload" href="fonts/roboto-condensed-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/roboto-condensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
+
   <body>
     <div class="wrapper">
       <header class="page-header">
@@ -46,7 +48,10 @@
           </div>
         </div>
       </header>
+
       <main>
+        <h1 class="visually-hidden">Smart Device - умные технологии</h1>
+
         <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
@@ -56,9 +61,112 @@
             <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
           </div>
         </section>
+
       </main>
-      <footer>
-        <div class="container"></div>
+
+      <footer class="page-footer">
+        <div class="container container--full-width">
+          <div class="page-footer__wrapper">
+            <div class="page-footer__box">
+              <svg class="page-footer__logo" width="215" height="55">
+                <use href="img/sprite_auto.svg#logo"></use>
+              </svg>
+              <div class="page-footer__social social">
+                <ul class="social__list">
+                  <li class="social__item">
+                    <a class="social__link social__link--odnoklassniki" href="#" target="_blank">
+                      <svg width="30" height="30">
+                        <use href="img/sprite_auto.svg#icon-odnoklassniki"></use>
+                      </svg>
+                      <span class="visually-hidden">Одноклассники</span>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link social__link--vk" href="#" target="_blank">
+                      <svg width="30" height="30">
+                        <use href="img/sprite_auto.svg#icon-vk"></use>
+                      </svg>
+                      <span class="visually-hidden">Вконтакте</span>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link social__link--pinterest" href="#" target="_blank">
+                      <svg width="30" height="30">
+                        <use href="img/sprite_auto.svg#icon-pinterest"></use>
+                      </svg>
+                      <span class="visually-hidden">Пинтерест</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__site-sections site-sections" data-site-sections="is-closed">
+              <div class="page-footer__container site-sections__box">
+                <h2 class="page-footer__caption site-sections__caption">Разделы сайта</h2>
+                <button class="page-footer__toggle site-sections__toggle" type="button">
+                  <span class="visually-hidden">Открыть</span>
+                </button>
+              </div>
+              <ul class="site-sections__list">
+                <li class="site-sections__item">
+                  <a class="site-sections__link" href="#">
+                    О Компании
+                  </a>
+                </li>
+                <li class="site-sections__item">
+                  <a class="site-sections__link" href="#">
+                    Продукты
+                  </a>
+                </li>
+                <li class="site-sections__item">
+                  <a class="site-sections__link" href="#">
+                    Производство печатных плат
+                  </a>
+                </li>
+                <li class="site-sections__item">
+                  <a class="site-sections__link" href="#">
+                    Монтаж печатных плат
+                  </a>
+                </li>
+                <li class="site-sections__item">
+                  <a class="site-sections__link" href="#">
+                    Комплектующие
+                  </a>
+                </li>
+                <li class="site-sections__item">
+                  <a class="site-sections__link" href="#">
+                    Доставка
+                  </a>
+                </li>
+                <li class="site-sections__item">
+                  <a class="site-sections__link" href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__contacts contacts" data-contacts="is-closed">
+              <div class="page-footer__container contacts__box">
+                <h2 class="page-footer__caption contacts__caption">Наш офис</h2>
+                <button class="page-footer__toggle contacts__toggle" type="button">
+                  <span class="visually-hidden">Открыть</span>
+                </button>
+              </div>
+              <p class="contacts__info contacts__info--address">
+                г. Мытищи, Олимпийский проспект, д.10
+              </p>
+              <p class="contacts__info">
+                +7 (495) 589-40-50
+              </p>
+              <p class="contacts__info">
+                +7 (925) 389-58-29
+              </p>
+              <p class="contacts__info">
+                +7 (925) 364-78-13
+              </p>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 

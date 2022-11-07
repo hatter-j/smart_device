@@ -1,5 +1,4 @@
 .page {
-  //height: 100%;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 21px;
@@ -8,4 +7,6 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }

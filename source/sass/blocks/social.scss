@@ -1,0 +1,28 @@
+.social {
+  padding-top: 29px;
+  padding-right: 55px;
+  padding-left: 10px;
+
+  @include vp-1023 {
+    padding: 0;
+    align-self: center;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+  }
+}
+
+.social__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+
+  @include vp-1023 {
+    gap: 25px;
+  }
+}

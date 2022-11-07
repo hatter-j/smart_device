@@ -1,0 +1,80 @@
+.site-sections {
+  padding-right: 30px;
+
+  @include vp-1023 {
+    padding-right: 0;
+    margin-right: auto;
+  }
+}
+
+[data-site-sections='is-opened'] .site-sections__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $color-default-white;
+  width: 15px;
+  height: 1px;
+}
+
+[data-site-sections='is-closed'] .site-sections__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color-default-white;
+    width: 15px;
+    height: 1px;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+[data-site-sections='is-closed'] .site-sections__list {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.site-sections__list {
+  list-style: none;
+  padding: 10px 0 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 220px 220px;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  column-gap: 30px;
+
+  @include vp-1023 {
+    grid-template-columns: 220px;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    column-gap: 0;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-sections__item {
+  padding-bottom: 10px;
+
+  @include vp-1023 {
+    padding-bottom: 9px;
+  }
+}
+
+.site-sections__link {
+  color: $color-light-white;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

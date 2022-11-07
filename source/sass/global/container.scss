@@ -2,19 +2,26 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 350px; //десктоп
+  padding: 0 40px; //  десктоп
 
   @include vp-1439 {
-    padding: 0 109px;
+    padding: 0 32px;
   }
 
   @include vp-1023 {
-    padding: 0 50px; //переход на таблет
-    max-width: 770px;
+    padding: 0 24px; //  таблет
+    //max-width: 770px;
   }
 
   @include vp-767 {
-    padding: 0 25px;  //переход на мобилку
-    max-width: 320px;
+    padding: 0 16px;  //  мобилка
+    //max-width: 320px;
+  }
+}
+
+.container--full-width {
+  @include vp-767 {
+    padding: 0;
+    width: 100%;
   }
 }

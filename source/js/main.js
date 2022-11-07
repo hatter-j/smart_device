@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {toggleSiteSections, toggleContacts} from './modules/page-footer-accordeon';
 
 // ---------------------------------
 
@@ -11,6 +12,8 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
+  toggleSiteSections();
+  toggleContacts();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
