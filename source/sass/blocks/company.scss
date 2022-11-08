@@ -1,0 +1,51 @@
+.company {
+  text-align: left;
+}
+
+.company__wrapper {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../../img/2022.png");
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 320px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/2022@2x.png");
+    }
+  }
+}
+
+.company__box {
+  max-width: 970px;
+  margin-left: 100px;
+}
+
+.company__caption {
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+}
+
+.company__description {
+  line-height: 22px;
+}
+
+// .company__description--hide {
+//   display: none;
+// }
+
+[data-company='is-closed'] .company__description--hide {
+  display: none;
+}
+
+[data-company='is-opened'] .company__description--hide {
+  display: block;
+}
