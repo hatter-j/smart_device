@@ -28,6 +28,19 @@
   }
 }
 
+[data-contacts='is-opened'] .contacts__toggle,
+[data-contacts='is-closed'] .contacts__toggle {
+  @include vp-767 {
+    display: block;
+    border: none;
+    background-color: $color-transparent;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    position: relative;
+  }
+}
+
 [data-contacts='is-opened'] .contacts__toggle::before {
   content: "";
   position: absolute;

@@ -84,14 +84,4 @@
 
 .page-footer__toggle {
   display: none;
-
-  @include vp-767 {
-    display: block;
-    border: none;
-    background-color: $color-transparent;
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
-    position: relative;
-  }
 }

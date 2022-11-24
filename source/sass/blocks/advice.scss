@@ -1,0 +1,108 @@
+.advice {
+  background-color: $color-light-blue;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-blue;
+    clip-path: polygon(0 0, 100% 0, 51% 0%, 0 100%);
+    z-index: -1;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+}
+
+.advice__wrapper {
+  padding-top: 130px;
+  padding-bottom: 247px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-1023 {
+    padding-top: 10px;
+    padding-bottom: 123px;
+    justify-content: stretch;
+  }
+
+  @include vp-767 {
+    padding-bottom: 88px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../../img/svg/paper-airplane.svg");
+    background-repeat: no-repeat;
+    width: 510px;
+    height: 285px;
+    margin-left: 45px;
+    margin-top: 50px;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+}
+
+.advice__box {
+  padding-top: 35px;
+  margin-left: 115px;
+
+  @include vp-1023 {
+    margin-left: 0;
+    padding-left: 25px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+}
+
+.advice__caption {
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: $color-default-white;
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.advice__note {
+  line-height: 22px;
+  color: $color-default-white;
+  margin-top: 5px;
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 250px;
+  }
+}
+
+.advice__form {
+  padding-top: 5px;
+
+  @include vp-767 {
+    padding-top: 15px;
+  }
+}

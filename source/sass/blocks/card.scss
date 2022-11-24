@@ -1,0 +1,143 @@
+.card {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
+
+  @include vp-1023 {
+    min-height: 250px;
+  }
+}
+
+.card__link {
+  padding-top: 27px;
+  padding-left: 40px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+
+  @include vp-1023 {
+    padding-top: 18px;
+    padding-left: 45px;
+  }
+
+  @include vp-767 {
+    padding-top: 8px;
+    padding-left: 28px;
+  }
+}
+
+.card--1 {
+  background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-desktop.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-desktop@2x.jpg");
+  }
+
+  @include vp-1023 {
+    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-tablet.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-mobile.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-mobile@2x.jpg");
+    }
+  }
+}
+
+.card--2 {
+  background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-desktop.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-desktop@2x.jpg");
+  }
+
+  @include vp-1023 {
+    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-tablet.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-mobile.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-mobile@2x.jpg");
+    }
+  }
+}
+
+.card--3 {
+  background-image:linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-desktop.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-desktop@2x.jpg");
+  }
+
+  @include vp-1023 {
+    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-tablet.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-mobile.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-mobile@2x.jpg");
+    }
+  }
+}
+
+.card__text {
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+  max-width: 190px;
+
+  @include vp-1023 {
+    font-size: 18px;
+    max-width: 170px;
+  }
+
+  br {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
+}
+
+.card__button {
+  background-color: $color-light-blue;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-767 {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.card__button-icon {
+  margin-left: 3px;
+}

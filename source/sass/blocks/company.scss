@@ -3,10 +3,20 @@
 }
 
 .company__wrapper {
-  padding-top: 40px;
+  padding-top: 35px;
+  padding-bottom: 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  @include vp-1023 {
+    padding-top: 10px;
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+    width: 100%;
+  }
 
   &::before {
     content: "";
@@ -15,9 +25,20 @@
     background-repeat: no-repeat;
     width: 150px;
     height: 320px;
+    margin-top: 37px;
+    margin-left: 10px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../../img/2022@2x.png");
+    }
+
+    @include vp-1023 {
+      margin-top: 43px;
+      margin-left: 0;
+    }
+
+    @include vp-767 {
+      display: none;
     }
   }
 }
@@ -25,6 +46,16 @@
 .company__box {
   max-width: 970px;
   margin-left: 100px;
+
+  @include vp-1023 {
+    max-width: 495px;
+    margin-left: 26px;
+  }
+
+  @include vp-767 {
+    max-width: 270px;
+    margin-left: 0;
+  }
 }
 
 .company__caption {
@@ -32,15 +63,42 @@
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
+  margin-bottom: 5px;
+
+  @include vp-767 {
+    font-size: 28px;
+    font-weight: 40px;
+    margin-top: 0;
+  }
 }
 
 .company__description {
   line-height: 22px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  @include vp-1023 {
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    font-weight: 19px;
+  }
 }
 
-// .company__description--hide {
-//   display: none;
-// }
+.company__description--desktop {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
 
 [data-company='is-closed'] .company__description--hide {
   display: none;
@@ -48,4 +106,42 @@
 
 [data-company='is-opened'] .company__description--hide {
   display: block;
+}
+
+[data-company='is-closed'] .company__description--hide-mobile {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+[data-company='is-opened'] .company__description--hide-mobile {
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.company__button {
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  color: $color-light-blue;
+  background-color: $color-transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid $color-light-blue;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 13px;
+  width: 180px;
+  margin-top: 40px;
+
+  @include vp-1023 {
+    margin-top: 13px;
+  }
+
+  @include vp-767 {
+    padding: 10px;
+    width: 160px;
+  }
 }

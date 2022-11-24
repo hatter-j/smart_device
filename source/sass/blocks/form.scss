@@ -1,0 +1,152 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__fieldset--agreement {
+  width: 260px;
+}
+
+.form__fieldset--textarea {
+  max-width: 580px;
+
+  @include vp-1023 {
+    max-width: 670px;
+  }
+
+  @include vp-767 {
+    max-width: 270px;
+    margin: 0 auto;
+  }
+}
+
+.form__list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 275px 275px;
+  column-gap: 30px;
+  margin-bottom: 20px;
+
+  @include vp-1023 {
+    grid-template-columns: 320px 320px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 270px;
+    row-gap: 20px;
+    justify-content: center;
+  }
+}
+
+.form__input {
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  border-radius: 3px;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  border: none;
+  background-color: $color-lightest-blue;
+  height: 50px;
+  width: 100%;
+  padding-left: 15px;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+}
+
+.form__label {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  cursor: pointer;
+}
+
+.form__label--agreement {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+
+  @include vp-1023 {
+    padding-top: 6px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url("../../img/svg/icon-checkbox-unchecked.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+}
+
+.form__checkbox:checked {
+  & ~ .form__label--agreement::before {
+    background-image: url("../../img/svg/icon-checkbox-checked.svg");
+  }
+}
+
+.form__textarea {
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: none;
+  background-color: $color-lightest-blue;
+  resize: vertical;
+  padding-top: 25px;
+  padding-left: 15px;
+  width: 100%;
+
+  @include vp-767 {
+    height: 180px;
+  }
+}
+
+.form__box {
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+
+  @include vp-1023 {
+    gap: 85px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 16px
+  }
+}
+
+.form__button {
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  line-height: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-default-white;
+  letter-spacing: 0.05em;
+  background-color: $color-dark-blue;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 14px;
+  width: 265px;
+
+  @include vp-767 {}
+  width: 270px;
+}

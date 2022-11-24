@@ -7,6 +7,19 @@
   }
 }
 
+[data-site-sections='is-opened'] .site-sections__toggle,
+[data-site-sections='is-closed'] .site-sections__toggle {
+  @include vp-767 {
+    display: block;
+    border: none;
+    background-color: $color-transparent;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    position: relative;
+  }
+}
+
 [data-site-sections='is-opened'] .site-sections__toggle::before {
   content: "";
   position: absolute;
