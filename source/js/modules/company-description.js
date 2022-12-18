@@ -1,5 +1,5 @@
-const companyDescription = document.querySelector('.company__box');
-const descriptionToggle = document.querySelector('.company__button');
+const companyDescription = document.querySelector('[data-company]');
+const descriptionToggle = document.querySelector('[data-company-button]');
 
 
 const toggleDescription = () => {

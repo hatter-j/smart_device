@@ -1,5 +1,5 @@
-const promoButton = document.querySelector('.promo__button');
-const adviceSection = document.querySelector('.advice');
+const promoButton = document.querySelector('[data-promo-button]');
+const adviceSection = document.querySelector('[data-advice]');
 
 const scrollToAdvice = () => {
   promoButton.addEventListener('click', () => {

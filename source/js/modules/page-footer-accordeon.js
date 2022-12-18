@@ -1,8 +1,8 @@
-const siteSections = document.querySelector('.site-sections');
-const siteSectionsToggle = siteSections.querySelector('.site-sections__toggle');
+const siteSections = document.querySelector('[data-site-sections]');
+const siteSectionsToggle = siteSections.querySelector('[data-site-sections-toggle]');
 
-const contacts = document.querySelector('.contacts');
-const contactsToggle = contacts.querySelector('.contacts__toggle');
+const contacts = document.querySelector('[data-contacts]');
+const contactsToggle = contacts.querySelector('[data-contacts-toggle]');
 
 const toggleAccordeon = () => {
   siteSections.setAttribute('data-site-sections', 'is-closed');

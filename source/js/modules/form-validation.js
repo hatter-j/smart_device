@@ -1,6 +1,6 @@
-const form = document.querySelector('.form');
-const userName = form.querySelector('#user-name');
-const userPhone = form.querySelector('#user-phone');
+const form = document.querySelector('[data-form]');
+const userName = form.querySelector('[name=username]');
+const userPhone = form.querySelector('[phone=userphone]');
 
 const letters = /^[а-яА-ЯёЁa-zA-Z]+$/;
 const phoneNumbers = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$/;
