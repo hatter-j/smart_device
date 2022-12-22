@@ -397,7 +397,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../fonts/roboto-condensed-400.woff2") format("woff2"), url("../fonts/roboto-condensed-400.woff") format("woff");
+  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff");
 }
 
 @font-face {
@@ -1108,18 +1108,18 @@ button,
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 650px;
-}
-
-.card__link {
   padding-top: 27px;
   padding-left: 40px;
-  height: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr -webkit-min-content;
   -ms-grid-rows: 1fr min-content;
   grid-template-rows: 1fr -webkit-min-content;
   grid-template-rows: 1fr min-content;
+}
+
+.card__link {
+  height: 100%;
 }
 
 .card--1 {
@@ -1751,9 +1751,6 @@ button,
 
   .card {
     min-height: 250px;
-  }
-
-  .card__link {
     padding-top: 18px;
     padding-left: 45px;
   }
@@ -2100,7 +2097,7 @@ button,
     grid-template-columns: 270px;
   }
 
-  .card__link {
+  .card {
     padding-top: 8px;
     padding-left: 28px;
   }

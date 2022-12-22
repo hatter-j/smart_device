@@ -3,20 +3,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 650px;
-
-  @include vp-1023 {
-    min-height: 250px;
-  }
-}
-
-.card__link {
   padding-top: 27px;
   padding-left: 40px;
-  height: 100%;
   display: grid;
   grid-template-rows: 1fr min-content;
 
   @include vp-1023 {
+    min-height: 250px;
     padding-top: 18px;
     padding-left: 45px;
   }
@@ -25,6 +18,10 @@
     padding-top: 8px;
     padding-left: 28px;
   }
+}
+
+.card__link {
+  height: 100%;
 }
 
 .card--1 {
