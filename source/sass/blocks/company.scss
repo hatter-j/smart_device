@@ -15,6 +15,7 @@
 
   @include vp-767 {
     padding-top: 15px;
+    padding-bottom: 77px;
     width: 100%;
   }
 
@@ -49,7 +50,7 @@
 
   @include vp-1023 {
     max-width: 495px;
-    margin-left: 26px;
+    margin-left: 30px;
   }
 
   @include vp-767 {
@@ -83,7 +84,8 @@
 
   @include vp-767 {
     font-size: 14px;
-    font-weight: 19px;
+    line-height: 19px;
+    margin-top: 0;
   }
 }
 
@@ -143,5 +145,6 @@
   @include vp-767 {
     padding: 10px;
     width: 160px;
+    margin-top: 0;
   }
 }

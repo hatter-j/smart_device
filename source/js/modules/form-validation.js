@@ -1,37 +1,42 @@
 const form = document.querySelector('[data-form]');
-const userName = form.querySelector('[name=username]');
-const userPhone = form.querySelector('[phone=userphone]');
-
-const letters = /^[а-яА-ЯёЁa-zA-Z]+$/;
-const phoneNumbers = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$/;
+const userName = form.querySelector('[name="user-name"]');
 
 const checkNameValidity = () => {
-  form.addEventListener('submit', (evt) => {
-    if (userName.value.match(letters)) {
-      return true;
-    } else {
-      evt.preventDefault();
-      userName.focus();
-      alert('В поле Имя можно вводить только буквы');
-      return false;
-    }
-  });
-};
 
-const checkPhoneValidity = () => {
+  checkNameValidity.prototype = {
+
+    invalidities: [],
+
+    checkValidity(userName) {
+      if (!userName.value.match(/^[а-яА-ЯёЁa-zA-Z]+$/)) {
+        this.addInvalidity('В поле "Имя" можно вводить только буквы');
+      }
+    },
+
+    addInvalidity(message) {
+      this.invalidities.push(message);
+    },
+
+    getInvalidities() {
+      return this.invalidities.join('. \n');
+    },
+  };
+
   form.addEventListener('submit', (evt) => {
-    if (userPhone.value.match(phoneNumbers)) {
-      return true;
-    } else {
-      evt.preventDefault();
-      userPhone.focus();
-      alert('В поле Телефон можно вводить только цифры');
-      return false;
+    for (let i = 0; i < userName.length; i++) {
+
+      const input = userName[i];
+
+      if (input.checkValidity() === false) {
+        const inputValidation = new checkNameValidity();
+        inputValidation.checkValidity(input);
+        const validityMessage = inputValidation.getInvalidities();
+        input.setValidation(validityMessage);
+      }
     }
   });
 };
 
 export {
-  checkNameValidity,
-  checkPhoneValidity
+  checkNameValidity
 };

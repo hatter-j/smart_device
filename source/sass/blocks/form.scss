@@ -124,10 +124,11 @@
   gap: 48px;
 
   @include vp-1023 {
-    gap: 85px;
+    gap: 80px;
   }
 
   @include vp-767 {
+    padding-top: 23px;
     flex-direction: column;
     gap: 16px
   }

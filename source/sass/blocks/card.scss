@@ -101,10 +101,9 @@
   font-size: 20px;
   line-height: 30px;
   color: $color-default-white;
-  max-width: 190px;
+  max-width: 170px;
 
   @include vp-1023 {
-    font-size: 18px;
     max-width: 170px;
   }
 

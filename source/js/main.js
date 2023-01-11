@@ -3,7 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {scrollToAdvice} from './modules/page-scroll-to-advice';
 import {toggleDescription} from './modules/company-description';
 import {toggleAccordeon} from './modules/page-footer-accordeon';
-import {checkNameValidity, checkPhoneValidity} from './modules/form-validation';
+import {checkNameValidity} from './modules/form-validation';
+import {openPopUp} from './modules/modals/modals';
 
 // ---------------------------------
 
@@ -19,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   toggleDescription();
   toggleAccordeon();
   checkNameValidity();
-  checkPhoneValidity();
+  openPopUp();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

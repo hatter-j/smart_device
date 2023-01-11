@@ -117,3 +117,7 @@
     pointer-events: auto;
   }
 }
+
+[data-modal='is-active'] .modal {
+  display: block;
+}

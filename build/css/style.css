@@ -770,6 +770,10 @@ button,
   pointer-events: auto;
 }
 
+[data-modal=is-active] .modal {
+  display: block;
+}
+
 .page {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
@@ -967,7 +971,7 @@ button,
 
 .features__caption {
   font-family: "Roboto Condensed", Arial, sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 34px;
   font-weight: 400;
   color: #00B2FF;
@@ -1082,8 +1086,6 @@ button,
 
 .goods__caption--mobile {
   font-family: "Roboto Condensed", Arial, sans-serif;
-  font-size: 25px;
-  line-height: 40px;
   font-weight: 400;
   color: #ffffff;
   display: none;
@@ -1145,7 +1147,7 @@ button,
   font-size: 20px;
   line-height: 30px;
   color: #ffffff;
-  max-width: 190px;
+  max-width: 170px;
 }
 
 .card__text br {
@@ -1207,6 +1209,9 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-column-gap: 105px;
+  -moz-column-gap: 105px;
+  column-gap: 105px;
 }
 
 .advice__wrapper::before {
@@ -1216,13 +1221,12 @@ button,
   background-repeat: no-repeat;
   width: 510px;
   height: 285px;
-  margin-left: 45px;
-  margin-top: 50px;
+  margin-top: 57px;
 }
 
 .advice__box {
   padding-top: 35px;
-  margin-left: 115px;
+  margin-left: 15px;
 }
 
 .advice__caption {
@@ -1232,7 +1236,7 @@ button,
   font-weight: 400;
   color: #ffffff;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 11px;
 }
 
 .advice__note {
@@ -1423,8 +1427,9 @@ button,
 
 .page-footer__caption {
   font-family: "Roboto Condensed", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 16px;
+  letter-spacing: 0.05em;
   font-weight: 400;
   text-transform: uppercase;
   margin-top: 0;
@@ -1533,7 +1538,7 @@ button,
 .contacts__info {
   color: rgba(248, 253, 255, 0.7);
   max-width: 325px;
-  margin: 5px 0 9px;
+  margin: 2px 0 9px;
 }
 
 [data-contacts=is-opened] .contacts__toggle::before {
@@ -1695,7 +1700,7 @@ button,
   }
 
   .features__description {
-    margin-top: 5px;
+    margin-top: 0px;
   }
 
   .company__wrapper {
@@ -1710,7 +1715,7 @@ button,
 
   .company__box {
     max-width: 495px;
-    margin-left: 26px;
+    margin-left: 30px;
   }
 
   .company__description {
@@ -1733,12 +1738,13 @@ button,
   .goods__caption {
     padding-left: 25px;
     margin-top: 35px;
-    font-size: 33px;
+    font-size: 36px;
+    max-width: 700px;
   }
 
   .goods__list {
     padding-left: 0;
-    padding-top: 7px;
+    padding-top: 3px;
     -ms-grid-columns: 670px;
     grid-template-columns: 670px;
     -ms-grid-rows: (auto)[3];
@@ -1774,7 +1780,6 @@ button,
   }
 
   .card__text {
-    font-size: 18px;
     max-width: 170px;
   }
 
@@ -1789,9 +1794,6 @@ button,
   .advice__wrapper {
     padding-top: 10px;
     padding-bottom: 123px;
-    -webkit-box-pack: stretch;
-    -ms-flex-pack: stretch;
-    justify-content: stretch;
   }
 
   .advice__wrapper::before {
@@ -1800,11 +1802,15 @@ button,
 
   .advice__box {
     margin-left: 0;
-    padding-left: 25px;
+  }
+
+  .advice__caption {
+    margin-bottom: 5px;
   }
 
   .advice__note {
     margin-bottom: 5px;
+    margin-top: 0;
   }
 
   .form__fieldset--textarea {
@@ -1821,7 +1827,7 @@ button,
   }
 
   .form__box {
-    gap: 85px;
+    gap: 80px;
   }
 
   .page-footer {
@@ -1913,6 +1919,7 @@ button,
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
+    max-width: 320px;
   }
 
   .container--full-width {
@@ -1951,13 +1958,13 @@ button,
   }
 
   .page-header__mail {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     margin-left: auto;
-    margin-right: 40px;
+    margin-right: 38px;
   }
 
   .page-header__phone {
-    margin-right: 60px;
+    margin-right: 29px;
     margin-left: 0;
     margin-bottom: 10px;
   }
@@ -2027,7 +2034,7 @@ button,
   }
 
   .features__caption {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 28px;
     margin-bottom: 11px;
   }
@@ -2039,6 +2046,7 @@ button,
 
   .company__wrapper {
     padding-top: 15px;
+    padding-bottom: 77px;
     width: 100%;
   }
 
@@ -2059,7 +2067,8 @@ button,
 
   .company__description {
     font-size: 14px;
-    font-weight: 19px;
+    line-height: 19px;
+    margin-top: 0;
   }
 
   .company__description--desktop {
@@ -2077,10 +2086,12 @@ button,
   .company__button {
     padding: 10px;
     width: 160px;
+    margin-top: 0;
   }
 
   .goods__wrapper {
     padding-top: 15px;
+    padding-bottom: 87px;
   }
 
   .goods__caption {
@@ -2088,6 +2099,11 @@ button,
   }
 
   .goods__caption--mobile {
+    font-size: 28px;
+    line-height: 40px;
+    padding-left: 8px;
+    max-width: 200px;
+    margin-top: 30px;
     display: block;
   }
 
@@ -2126,7 +2142,7 @@ button,
   }
 
   .advice__wrapper {
-    padding-bottom: 88px;
+    padding-bottom: 90px;
   }
 
   .advice__box {
@@ -2136,11 +2152,14 @@ button,
   .advice__caption {
     font-size: 30px;
     line-height: 42px;
+    padding-left: 10px;
+    margin-bottom: 7px;
   }
 
   .advice__note {
     font-size: 14px;
     line-height: 19px;
+    padding-left: 10px;
     max-width: 250px;
   }
 
@@ -2167,6 +2186,7 @@ button,
   }
 
   .form__box {
+    padding-top: 23px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
