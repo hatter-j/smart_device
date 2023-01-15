@@ -1,7 +1,7 @@
 .promo {
   text-align: left;
   background-color: $color-dark-blue;
-  background-image: linear-gradient($color-gradient-blue, $color-gradient-light), url("../../img/background-main.jpg");
+  background-image: linear-gradient($color-gradient-blue, $color-gradient-light), url("../img/background-main.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,11 +9,11 @@
   min-height: 880px;
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("../../img/background-main@2x.jpg");
+    background-image: url("../img/background-main@2x.jpg");
   }
 
   @include vp-1023 {
-    background-image: url("../../img/background-main-tablet.jpg");
+    background-image: url("../img/background-main-tablet.jpg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,12 +21,12 @@
     min-height: 640px;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/background-main-tablet@2x.jpg");
+      background-image: url("../img/background-main-tablet@2x.jpg");
     }
   }
 
   @include vp-767 {
-    background-image: url("../../img/background-main-mobile.jpg");
+    background-image: url("../img/background-main-mobile.jpg");
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,7 +34,7 @@
     min-height: 560px;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/background-main-mobile@2x.jpg");
+      background-image: url("../img/background-main-mobile@2x.jpg");
     }
   }
 }
@@ -42,12 +42,11 @@
 .promo__wrapper {
   padding-top: 105px;
   margin: 0 auto;
-  width: 950px;
-  padding-right: 90px;
-  max-width: 1200px;
+  padding-left: 125px;
+  max-width: 1220px;
 
   @include vp-1023 {
-    padding-right: 0;
+    padding-left: 0;
     max-width: 670px;
   }
 

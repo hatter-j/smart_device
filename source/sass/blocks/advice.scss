@@ -12,7 +12,7 @@
     width: 100%;
     height: 100%;
     background-color: $color-blue;
-    clip-path: polygon(0 0, 100% 0, 51% 0%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 50.6% 0%, 0 100%);
     z-index: -1;
 
     @include vp-1023 {
@@ -24,14 +24,16 @@
 .advice__wrapper {
   padding-top: 130px;
   padding-bottom: 247px;
+  padding-right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 105px;
+  column-gap: 120px;
 
   @include vp-1023 {
     padding-top: 10px;
     padding-bottom: 123px;
+    padding-right: 0;
   }
 
   @include vp-767 {
@@ -41,11 +43,11 @@
   &::before {
     content: "";
     display: block;
-    background-image: url("../../img/svg/paper-airplane.svg");
+    background-image: url("../img/svg/paper-airplane.svg");
     background-repeat: no-repeat;
     width: 510px;
     height: 285px;
-    margin-top: 57px;
+    margin-top: 55px;
 
     @include vp-1023 {
       display: none;
@@ -55,7 +57,7 @@
 
 .advice__box {
   padding-top: 35px;
-  margin-left: 15px;
+  margin-left: 5px;
 
   @include vp-1023 {
     margin-left: 0;

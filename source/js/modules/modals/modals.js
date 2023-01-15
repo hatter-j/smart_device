@@ -205,18 +205,3 @@ export class Modals {
     this._enableScrolling = true;
   }
 }
-
-// Открыть модалку
-
-const popUp = document.querySelector('[data-modal]');
-const popUpButton = document.querySelector('[data-modal-button]');
-
-const openPopUp = () => {
-  popUpButton.addEventListener('click', () => {
-    popUp.setAttribute('data-modal', 'is-active');
-  });
-};
-
-export {
-  openPopUp
-};

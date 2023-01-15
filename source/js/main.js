@@ -3,8 +3,9 @@ import {initModals} from './modules/modals/init-modals';
 import {scrollToAdvice} from './modules/page-scroll-to-advice';
 import {toggleDescription} from './modules/company-description';
 import {toggleAccordeon} from './modules/page-footer-accordeon';
-import {checkNameValidity} from './modules/form-validation';
-import {openPopUp} from './modules/modals/modals';
+import {initPhoneMask} from './modules/mask';
+import {validateForm} from './modules/form-validation';
+import {openModal, closeModal} from './modules/modals/modal';
 
 // ---------------------------------
 
@@ -19,14 +20,16 @@ window.addEventListener('DOMContentLoaded', () => {
   scrollToAdvice();
   toggleDescription();
   toggleAccordeon();
-  checkNameValidity();
-  openPopUp();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initPhoneMask();
+    validateForm();
+    openModal();
+    closeModal();
   });
 });
 

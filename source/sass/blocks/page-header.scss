@@ -26,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
 
   @include vp-1023 {
@@ -55,7 +55,7 @@
 .page-header__mail {
   display: flex;
   align-items: center;
-  margin-left: 33px;
+  margin-left: 37px;
   margin-bottom: 5px;
 
   @include vp-1023 {
@@ -73,7 +73,7 @@
 .page-header__phone {
   display: flex;
   align-items: center;
-  margin-right: 37px;
+  margin-right: 42px;
   margin-bottom: 5px;
 
   @include vp-1023 {
@@ -112,7 +112,7 @@
   cursor: pointer;
   padding: 10px;
   width: 160px;
-  margin-right: 43px;
+  margin-right: 60px;
   margin-bottom: 5px;
 
   @include vp-1023 {

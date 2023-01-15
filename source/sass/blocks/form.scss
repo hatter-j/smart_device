@@ -86,7 +86,7 @@
     display: block;
     width: 25px;
     height: 25px;
-    background-image: url("../../img/svg/icon-checkbox-unchecked.svg");
+    background-image: url("../img/svg/icon-checkbox-unchecked.svg");
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 10px;
@@ -95,7 +95,7 @@
 
 .form__checkbox:checked {
   & ~ .form__label--agreement::before {
-    background-image: url("../../img/svg/icon-checkbox-checked.svg");
+    background-image: url("../img/svg/icon-checkbox-checked.svg");
   }
 }
 

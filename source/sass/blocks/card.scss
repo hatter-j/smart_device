@@ -25,73 +25,73 @@
 }
 
 .card--1 {
-  background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-desktop.jpg");
+  background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-1-desktop.jpg");
 
   @media (min-resolution: $retina-dppx) {
-    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-desktop@2x.jpg");
+    background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-1-desktop@2x.jpg");
   }
 
   @include vp-1023 {
-    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-tablet.jpg");
+    background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-1-tablet.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-tablet@2x.jpg");
+      background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-1-tablet@2x.jpg");
     }
   }
 
   @include vp-767 {
-    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-mobile.jpg");
+    background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-1-mobile.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-1-mobile@2x.jpg");
+      background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-1-mobile@2x.jpg");
     }
   }
 }
 
 .card--2 {
-  background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-desktop.jpg");
+  background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-2-desktop.jpg");
 
   @media (min-resolution: $retina-dppx) {
-    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-desktop@2x.jpg");
+    background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-2-desktop@2x.jpg");
   }
 
   @include vp-1023 {
-    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-tablet.jpg");
+    background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-2-tablet.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-tablet@2x.jpg");
+      background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-2-tablet@2x.jpg");
     }
   }
 
   @include vp-767 {
-    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-mobile.jpg");
+    background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-2-mobile.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-2-mobile@2x.jpg");
+      background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-2-mobile@2x.jpg");
     }
   }
 }
 
 .card--3 {
-  background-image:linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-desktop.jpg");
+  background-image:linear-gradient($color-blue, $color-blue), url("../img/background-card-3-desktop.jpg");
 
   @media (min-resolution: $retina-dppx) {
-    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-desktop@2x.jpg");
+    background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-3-desktop@2x.jpg");
   }
 
   @include vp-1023 {
-    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-tablet.jpg");
+    background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-3-tablet.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-tablet@2x.jpg");
+      background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-3-tablet@2x.jpg");
     }
   }
 
   @include vp-767 {
-    background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-mobile.jpg");
+    background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-3-mobile.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient($color-blue, $color-blue), url("../../img/background-card-3-mobile@2x.jpg");
+      background-image: linear-gradient($color-blue, $color-blue), url("../img/background-card-3-mobile@2x.jpg");
     }
   }
 }

@@ -26,7 +26,6 @@
   line-height: 51px;
   font-weight: 400;
   color: $color-default-white;
-  padding-left: 10px;
 
   @include vp-1023 {
     padding-left: 25px;
@@ -58,7 +57,7 @@
 
 .goods__list {
   list-style: none;
-  padding-left: 7px;
+  padding-left: 0;
   padding-top: 18px;
   margin: 0;
   display: grid;

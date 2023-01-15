@@ -13,8 +13,8 @@
     <link rel="preload" href="fonts/roboto-condensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
 
-  <body>
-    <div class="wrapper">
+  <body id="body">
+    <div class="wrapper" id="wrapper">
       <header class="page-header">
         <div class="container">
           <div class="page-header__wrapper">
@@ -41,7 +41,7 @@
               </p>
             </div>
             <div class="page-header__box">
-              <button class="page-header__button" type="button" data-modal-button>
+              <button class="page-header__button" type="button" data-modal="open-modal">
                 Заказать звонок
               </button>
             </div>
@@ -213,7 +213,7 @@
                 <p class="advice__note">
                   Мы проконсультируем Вас бесплатно
                 </p>
-                <form class="advice__form form" method="post" action="https://echo.htmlacademy.ru/" target="_blank" data-form>
+                <form class="advice__form form" method="post" action="https://echo.htmlacademy.ru/" target="_blank">
                   <fieldset class="form__fieldset">
                     <ul class="form__list">
                       <li class="form__item">
@@ -223,7 +223,7 @@
                       </li>
                       <li class="form__item">
                         <label class="form__label" for="user-phone">
-                          <input class="form__input" type="tel" name="user-phone" id="user-phone" required placeholder="Телефон" minlength="10" maxlength="10">
+                          <input class="form__input" type="tel" name="user-phone" id="user-phone" required placeholder="Телефон" data-phone-pattern>
                         </label>
                       </li>
                     </ul>
@@ -359,30 +359,24 @@
     </div>
 
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload is-closed" data-modal="feedback">
       <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
           <h3 class="modal__caption">Закажите звонок</h3>
           <p class="modal__description">
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-          <form class="modal__form" method="post" action="https://echo.htmlacademy.ru/" target="_blank">
+          <form class="modal__form" method="post" action="https://echo.htmlacademy.ru/" target="_blank" id="modal-form">
             <fieldset class="modal__fieldset">
               <ul class="modal__list">
                 <li class="modal__item">
                   <label class="modal__label" for="modal-user-name">
-                    <input class="modal__input" type="text" name="modal-user-name" id="modal-user-name" required placeholder="Имя" autofocus>
+                    <input class="modal__input" type="text" name="modal-user-name" id="modal-user-name" required placeholder="Имя">
                   </label>
                 </li>
                 <li class="modal__item">
                   <label class="modal__label" for="modal-user-phone">
-                    <input class="modal__input" type="tel" name="modal-user-phone" id="modal-user-phone" required placeholder="Телефон" minlength="10" maxlength="10">
+                    <input class="modal__input" type="tel" name="modal-user-phone" id="modal-user-phone" required placeholder="Телефон" data-phone-pattern>
                   </label>
                 </li>
               </ul>
@@ -405,20 +399,11 @@
             </div>
           </form>
         </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
 

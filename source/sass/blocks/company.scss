@@ -22,15 +22,14 @@
   &::before {
     content: "";
     display: block;
-    background-image: url("../../img/2022.png");
+    background-image: url("../img/2022.png");
     background-repeat: no-repeat;
     width: 150px;
     height: 320px;
     margin-top: 37px;
-    margin-left: 10px;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/2022@2x.png");
+      background-image: url("../img/2022@2x.png");
     }
 
     @include vp-1023 {

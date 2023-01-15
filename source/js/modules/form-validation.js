@@ -1,42 +1,27 @@
-const form = document.querySelector('[data-form]');
-const userName = form.querySelector('[name="user-name"]');
+const modalContainer = document.querySelector('[data-modal="feedback"]');
+const userName = modalContainer.querySelector('[name="modal-user-name"]');
+const userPhone = modalContainer.querySelector('[name="modal-user-phone"]');
+const modalForm = modalContainer.querySelector('#modal-form');
 
-const checkNameValidity = () => {
-
-  checkNameValidity.prototype = {
-
-    invalidities: [],
-
-    checkValidity(userName) {
-      if (!userName.value.match(/^[а-яА-ЯёЁa-zA-Z]+$/)) {
-        this.addInvalidity('В поле "Имя" можно вводить только буквы');
-      }
-    },
-
-    addInvalidity(message) {
-      this.invalidities.push(message);
-    },
-
-    getInvalidities() {
-      return this.invalidities.join('. \n');
-    },
-  };
-
-  form.addEventListener('submit', (evt) => {
-    for (let i = 0; i < userName.length; i++) {
-
-      const input = userName[i];
-
-      if (input.checkValidity() === false) {
-        const inputValidation = new checkNameValidity();
-        inputValidation.checkValidity(input);
-        const validityMessage = inputValidation.getInvalidities();
-        input.setValidation(validityMessage);
-      }
-    }
+const resetForm = () => {
+  modalForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    userName.value = '';
+    userPhone.value = '';
   });
 };
 
+const validateForm = () => {
+  if (userName.value || userPhone.value) {
+    modalForm.addEventListener('submit', function () {
+      localStorage.setItem('modal-user-name', userName.value);
+      localStorage.setItem('modal-user-phone', userPhone.value);
+      modalForm.submit();
+      resetForm();
+    });
+  }
+};
+
 export {
-  checkNameValidity
+  validateForm
 };
