@@ -114,6 +114,7 @@
   width: 160px;
   margin-right: 60px;
   margin-bottom: 5px;
+  display: inline-block;
 
   @include vp-1023 {
     display: none;

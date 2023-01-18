@@ -121,6 +121,11 @@
   }
 }
 
+[data-company='is-opened'] .company__button,
+[data-company='is-closed'] .company__button {
+  display: block;
+}
+
 .company__button {
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-size: 14px;
@@ -136,6 +141,7 @@
   padding: 13px;
   width: 180px;
   margin-top: 40px;
+  display: none;
 
   @include vp-1023 {
     margin-top: 13px;

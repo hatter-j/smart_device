@@ -17,6 +17,7 @@ const openModal = () => {
     toggleModal();
     setTimeout(userName.focus(), 2000);
     body.classList.add('modal-opened');
+    modalContainer.classList.add('is-active');
     interactiveElementsArr.forEach((element) => {
       element.setAttribute('tabindex', '-1');
     });
@@ -26,6 +27,7 @@ const openModal = () => {
 const prepareToCloseModal = () => {
   toggleModal();
   body.classList.remove('modal-opened');
+  modalContainer.classList.remove('is-active');
   interactiveElementsArr.forEach((element) => {
     element.setAttribute('tabindex', '1');
   });

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Smart Device умные технологии">
+    <title>Smart Device</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/pt-mono-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="page-header">
+        <div class="container">
+          <div class="page-header__wrapper">
+            <svg class="page-header__logo page-header__logo-desktop" width="215" height="55">
+              <use href="img/sprite_auto.svg#logo"></use>
+            </svg>
+            <svg class="page-header__logo page-header__logo-mobile" width="35" height="35">
+              <use href="img/sprite_auto.svg#logo-mobile"></use>
+            </svg>
+            <div class="page-header__mail">
+              <svg class="page-header__mail-icon" width="21" height="20">
+                <use href="img/sprite_auto.svg#icon-email"></use>
+              </svg>
+              <p class="page-header__mail-text">
+                info@sd.ru
+              </p>
+            </div>
+            <div class="page-header__phone">
+              <svg class="page-header__phone-icon" width="21" height="20">
+                <use href="img/sprite_auto.svg#icon-phone"></use>
+              </svg>
+              <p class="page-header__phone-text">
+                +7 (495) 000 52 52
+              </p>
+            </div>
+            <div class="page-header__box">
+              <a class="page-header__button" href="../modal_no_js.html" data-modal="open-modal">
+                Заказать звонок
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Модалки -->
+    <div class="modal is-active" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <h3 class="modal__caption">Закажите звонок</h3>
+          <p class="modal__description">
+            Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+          </p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-modal="close-modal">
+            <svg width="20" height="20">
+              <use href="img/sprite_auto.svg#icon-close"></use>
+            </svg>
+          </button>
+          <form class="modal__form" method="post" action="https://echo.htmlacademy.ru/" target="_blank" id="modal-form">
+            <fieldset class="modal__fieldset">
+              <ul class="modal__list">
+                <li class="modal__item">
+                  <label class="modal__label" for="modal-user-name">
+                    <input class="modal__input" type="text" name="modal-user-name" id="modal-user-name" required placeholder="Имя" pattern="^[а-яА-ЯёЁa-zA-Z]+$">
+                  </label>
+                </li>
+                <li class="modal__item">
+                  <label class="modal__label" for="modal-user-phone">
+                    <input class="modal__input" type="tel" name="modal-user-phone" id="modal-user-phone" required placeholder="Телефон" data-phone-pattern minlength="10" maxlength="10" pattern="\+?[0-9\s\-\(\)]+">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="modal__fieldset modal__fieldset--textarea">
+              <label class="modal__label" for="modal-user-text">
+                <textarea class="modal__textarea" name="modal-user-text" id="modal-user-text" rows="6" cols="25">Ваш вопрос</textarea>
+              </label>
+            </fieldset>
+
+            <div class="modal__box">
+              <button class="modal__button" type="submit">Отправить</button>
+              <fieldset class="modal__fieldset modal__fieldset--agreement">
+                <input class="modal__checkbox visually-hidden" type="checkbox" name="modal-user-agreement" id="modal-user-agreement" checked required>
+                <label class="modal__label modal__label--agreement" for="modal-user-agreement">
+                  Я согласен на обработку персональных данных
+                </label>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

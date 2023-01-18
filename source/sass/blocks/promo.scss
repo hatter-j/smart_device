@@ -86,11 +86,11 @@
   line-height: 34px;
   color: $color-default-white;
   max-width: 685px;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 
   @include vp-1023 {
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 
   @include vp-767 {
@@ -113,7 +113,7 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  padding: 15px;
+  padding: 17px 15px;
   width: 410px;
 
   @include vp-1023 {
