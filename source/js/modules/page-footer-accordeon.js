@@ -12,11 +12,9 @@ const toggleAccordeon = () => {
     const value = siteSections.getAttribute('data-site-sections');
     if (value === 'is-closed') {
       siteSections.setAttribute('data-site-sections', 'is-opened');
-      contacts.setAttribute('data-contacts', 'is-closed');
     }
     if (value === 'is-opened') {
       siteSections.setAttribute('data-site-sections', 'is-closed');
-      contacts.setAttribute('data-contacts', 'is-opened');
     }
   });
 
@@ -24,11 +22,9 @@ const toggleAccordeon = () => {
     const value = contacts.getAttribute('data-contacts');
     if (value === 'is-closed') {
       contacts.setAttribute('data-contacts', 'is-opened');
-      siteSections.setAttribute('data-site-sections', 'is-closed');
     }
     if (value === 'is-opened') {
       contacts.setAttribute('data-contacts', 'is-closed');
-      siteSections.setAttribute('data-site-sections', 'is-opened');
     }
   });
 };

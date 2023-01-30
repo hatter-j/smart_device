@@ -53,8 +53,10 @@
   }
 
   @include vp-767 {
-    max-width: 270px;
+    min-width: 270px;
+    max-width: 100%;
     margin-left: 0;
+    padding-left: 5px;
   }
 }
 

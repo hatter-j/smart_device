@@ -8,9 +8,11 @@ const toggleDescription = () => {
     const value = companyDescription.getAttribute('data-company');
     if (value === 'is-closed') {
       companyDescription.setAttribute('data-company', 'is-opened');
+      descriptionToggle.textContent = 'Свернуть';
     }
     if (value === 'is-opened') {
       companyDescription.setAttribute('data-company', 'is-closed');
+      descriptionToggle.textContent = 'Подробнее';
     }
   });
 };

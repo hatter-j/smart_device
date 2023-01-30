@@ -18,28 +18,30 @@
       <header class="page-header">
         <div class="container">
           <div class="page-header__wrapper">
-            <svg class="page-header__logo page-header__logo-desktop" width="215" height="55">
-              <use href="img/sprite_auto.svg#logo"></use>
-            </svg>
-            <svg class="page-header__logo page-header__logo-mobile" width="35" height="35">
-              <use href="img/sprite_auto.svg#logo-mobile"></use>
-            </svg>
-            <div class="page-header__mail">
+            <a class="page-header__logo">
+              <svg class="page-header__logo-icon page-header__logo-icon--desktop" width="215" height="55">
+                <use href="img/sprite_auto.svg#logo"></use>
+              </svg>
+              <svg class="page-header__logo-icon page-header__logo-icon--mobile" width="35" height="35">
+                <use href="img/sprite_auto.svg#logo-mobile"></use>
+              </svg>
+            </a>
+            <a class="page-header__mail" href="mailto:info@sd.ru">
               <svg class="page-header__mail-icon" width="21" height="20">
                 <use href="img/sprite_auto.svg#icon-email"></use>
               </svg>
               <p class="page-header__mail-text">
                 info@sd.ru
               </p>
-            </div>
-            <div class="page-header__phone">
+            </a>
+            <a class="page-header__phone" href="tel:+74950005252">
               <svg class="page-header__phone-icon" width="21" height="20">
                 <use href="img/sprite_auto.svg#icon-phone"></use>
               </svg>
               <p class="page-header__phone-text">
                 +7 (495) 000 52 52
               </p>
-            </div>
+            </a>
             <div class="page-header__box">
               <a class="page-header__button" href="../modal_no_js.html" data-modal="open-modal">
                 Заказать звонок
@@ -91,7 +93,7 @@
                     Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
                   </p>
                 </li>
-                <li class="features__item">
+                <li class="features__item features__item--short">
                   <svg class="features__item-icon" width="35" height="35">
                     <use href="img/sprite_auto.svg#icon-incognito"></use>
                   </svg>
@@ -100,7 +102,7 @@
                     По желанию клиента  мы обеспечиваем полную конфиденциальность.
                   </p>
                 </li>
-                <li class="features__item">
+                <li class="features__item features__item--short">
                   <svg class="features__item-icon" width="35" height="35">
                     <use href="img/sprite_auto.svg#icon-price"></use>
                   </svg>
@@ -162,13 +164,13 @@
                     <p class="card__text">
                       Производство печатных плат
                     </p>
+                    <button class="card__button" type="button" tabindex="-1">
+                      <svg class="card__button-icon" width="5" height="10">
+                        <use href="img/sprite_auto.svg#icon-arrow"></use>
+                      </svg>
+                      <span class="visually-hidden">Открыть</span>
+                    </button>
                   </a>
-                  <button class="card__button" type="button">
-                    <svg class="card__button-icon" width="5" height="10">
-                      <use href="img/sprite_auto.svg#icon-arrow"></use>
-                    </svg>
-                    <span class="visually-hidden">Открыть</span>
-                  </button>
                 </li>
                 <li class="goods__item card card--2">
                   <a class="card__link" href="#">
@@ -176,26 +178,26 @@
                       Монтаж<br>
                       печатных плат
                     </p>
+                    <button class="card__button" type="button" tabindex="-1">
+                      <svg class="card__button-icon" width="5" height="10">
+                        <use href="img/sprite_auto.svg#icon-arrow"></use>
+                      </svg>
+                      <span class="visually-hidden">Открыть</span>
+                    </button>
                   </a>
-                  <button class="card__button" type="button">
-                    <svg class="card__button-icon" width="5" height="10">
-                      <use href="img/sprite_auto.svg#icon-arrow"></use>
-                    </svg>
-                    <span class="visually-hidden">Открыть</span>
-                  </button>
                 </li>
                 <li class="goods__item card card--3">
                   <a class="card__link" href="#">
                     <p class="card__text">
                       Комплектующие для светотехники
                     </p>
+                    <button class="card__button" type="button" tabindex="-1">
+                      <svg class="card__button-icon" width="5" height="10">
+                        <use href="img/sprite_auto.svg#icon-arrow"></use>
+                      </svg>
+                      <span class="visually-hidden">Открыть</span>
+                    </button>
                   </a>
-                  <button class="card__button" type="button">
-                    <svg class="card__button-icon" width="5" height="10">
-                      <use href="img/sprite_auto.svg#icon-arrow"></use>
-                    </svg>
-                    <span class="visually-hidden">Открыть</span>
-                  </button>
                 </li>
               </ul>
             </div>
@@ -231,7 +233,7 @@
 
                   <fieldset class="form__fieldset form__fieldset--textarea">
                     <label class="form__label" for="user-text">
-                      <textarea class="form__textarea" name="user-text" id="user-text" rows="6" cols="25">Ваш вопрос</textarea>
+                      <textarea class="form__textarea" name="user-text" id="user-text" rows="6" cols="25" placeholder="Ваш вопрос"></textarea>
                     </label>
                   </fieldset>
 
@@ -289,9 +291,9 @@
               </div>
             </div>
             <div class="page-footer__site-sections site-sections" data-site-sections>
-              <div class="page-footer__container site-sections__box">
+              <div class="page-footer__container site-sections__box" data-site-sections-toggle>
                 <h2 class="page-footer__caption site-sections__caption">Разделы сайта</h2>
-                <button class="page-footer__toggle site-sections__toggle" type="button" data-site-sections-toggle>
+                <button class="page-footer__toggle site-sections__toggle" type="button">
                   <span class="visually-hidden">Открыть</span>
                 </button>
               </div>
@@ -334,24 +336,26 @@
               </ul>
             </div>
             <div class="page-footer__contacts contacts" data-contacts>
-              <div class="page-footer__container contacts__box">
+              <div class="page-footer__container contacts__box" data-contacts-toggle>
                 <h2 class="page-footer__caption contacts__caption">Наш офис</h2>
-                <button class="page-footer__toggle contacts__toggle" type="button" data-contacts-toggle>
+                <button class="page-footer__toggle contacts__toggle" type="button">
                   <span class="visually-hidden">Открыть</span>
                 </button>
               </div>
-              <p class="contacts__info contacts__info--address">
-                г. Мытищи, Олимпийский проспект, д.10
-              </p>
-              <p class="contacts__info">
-                +7 (495) 589-40-50
-              </p>
-              <p class="contacts__info">
-                +7 (925) 389-58-29
-              </p>
-              <p class="contacts__info">
-                +7 (925) 364-78-13
-              </p>
+              <div class="contacts__wrapper">
+                <p class="contacts__info contacts__info--address">
+                  г. Мытищи, Олимпийский проспект, д.10
+                </p>
+                <a class="contacts__info" href="tel:+74955894050">
+                  +7 (495) 589-40-50
+                </a>
+                <a class="contacts__info" href="tel:+79253895829">
+                  +7 (925) 389-58-29
+                </a>
+                <a class="contacts__info" href="tel:+79253647813">
+                  +7 (925) 364-78-13
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -360,7 +364,7 @@
 
     <!-- Модалки -->
     <div class="modal modal--preload is-closed" data-modal="feedback">
-      <div class="modal__wrapper">
+      <div class="modal__wrapper" data-modal="modal-wrapper">
         <div class="modal__content">
           <h3 class="modal__caption">Закажите звонок</h3>
           <p class="modal__description">
@@ -389,7 +393,7 @@
 
             <fieldset class="modal__fieldset modal__fieldset--textarea">
               <label class="modal__label" for="modal-user-text">
-                <textarea class="modal__textarea" name="modal-user-text" id="modal-user-text" rows="6" cols="25">Ваш вопрос</textarea>
+                <textarea class="modal__textarea" name="modal-user-text" id="modal-user-text" rows="6" cols="25" placeholder="Ваш вопрос"></textarea>
               </label>
             </fieldset>
 

@@ -20,11 +20,15 @@
   justify-content: center;
 
   @include vp-1023 {
-    grid-template-columns: 320px 320px;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   @include vp-767 {
-    grid-template-columns: 270px;
+    grid-template-columns: 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -49,6 +53,13 @@
     color: $color-default-white;
     background-color: $color-light-blue;
     border-color: $color-light-blue;
+  }
+}
+
+
+.features__item--short {
+  @include vp-767 {
+    min-height: 325px;
   }
 }
 
@@ -100,6 +111,8 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
+    min-width: 205px;
+    max-width: 100%;
   }
 }
 

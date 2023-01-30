@@ -38,13 +38,13 @@
   }
 }
 
-.page-header__logo-desktop{
+.page-header__logo-icon--desktop{
   @include vp-767 {
     display: none;
   }
 }
 
-.page-header__logo-mobile {
+.page-header__logo-icon--mobile {
   display: none;
 
   @include vp-767 {
@@ -53,6 +53,7 @@
 }
 
 .page-header__mail {
+  color: $color-default-white;
   display: flex;
   align-items: center;
   margin-left: 37px;
@@ -68,9 +69,15 @@
     margin-left: auto;
     margin-right: 38px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .page-header__phone {
+  color: $color-default-white;
   display: flex;
   align-items: center;
   margin-right: 42px;
@@ -87,10 +94,16 @@
     margin-left: 0;
     margin-bottom: 10px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .page-header__mail-text,
 .page-header__phone-text {
+  margin-top: 10px;
   margin-left: 15px;
 
   @include vp-1023 {
@@ -115,8 +128,14 @@
   margin-right: 60px;
   margin-bottom: 5px;
   display: inline-block;
+  vertical-align: top;
 
   @include vp-1023 {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
   }
 }

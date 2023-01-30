@@ -118,6 +118,10 @@
   }
 }
 
+.modal-opened {
+  overflow: hidden;
+}
+
 .modal__content {
   width: 500px;
   border-radius: 3px;
@@ -219,6 +223,12 @@
   padding-top: 25px;
   padding-left: 15px;
   width: 100%;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
 }
 
 .modal__box {

@@ -1,5 +1,6 @@
 const openModalBtn = document.querySelector('[data-modal="open-modal"]');
 const modalContainer = document.querySelector('[data-modal="feedback"]');
+const modalWrapper = document.querySelector('[data-modal="modal-wrapper"]');
 const closeModalBtn = document.querySelector('[data-modal="close-modal"]');
 const userName = document.getElementById('modal-user-name');
 const body = document.getElementById('body');
@@ -45,7 +46,7 @@ const closeModal = () => {
   });
 
   document.addEventListener('click', function (e) {
-    if (e.target === modalContainer) {
+    if (e.target === modalWrapper) {
       prepareToCloseModal();
     }
   });
